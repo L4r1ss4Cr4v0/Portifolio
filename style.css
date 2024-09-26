@@ -4,25 +4,90 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: "Inter", sans-serif;
+}
+
 main{
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 ul{
     list-style: none;
 }
 
+li, button{
+    column-gap: 10px;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+li{
+    position: relative;
+    letter-spacing: 5px;
+}
+
+li i{
+    position: absolute;
+    opacity: 0;
+    margin-left: 10%;
+    transition: .3s;
+}
+
+li:hover i{
+    opacity: 1;
+    margin-left: -1.6vw;
+}
+
+button{
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1vw;
+}
+
+button i{
+    font-size: 20px;
+}
+
 header{
-    width: 80vw;
+    width: 75vw;
     margin-top: 3vh;
-    padding: 3vh 0;
     background-color: #c8c8c8;
     border-radius: 100px;
+    padding: 2vh 0;
+    text-transform: uppercase;
 }
 
 header ul{
+    align-items: center;
+    column-gap: 5%;
+}
+
+.flex{
     display: flex;
-    column-gap: 30px;
     justify-content: center;
+}
+
+#curriculo{
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+#toggleMode{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+#toggleMode:hover{
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+li:hover, button:hover{
+    cursor: pointer;
 }
