@@ -4,3 +4,25 @@
     box-sizing: border-box;
 }
 
+main{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    width: 80vw;
+    margin-top: 3vh;
+    padding: 3vh 0;
+    background-color: #c8c8c8;
+    border-radius: 100px;
+}
+
+header ul{
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+}
