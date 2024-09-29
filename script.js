@@ -6,6 +6,3 @@ const links = {
 function goLink(site){
     window.open(links[site], "_blank"); 
 }
-
-var x = "informática" + 10 + 10
-console.log(x)
