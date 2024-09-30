@@ -6,10 +6,27 @@
 
 body{
     font-family: "Inter", sans-serif;
+    padding: 3vh 0;
 }
 
 main{
     flex-direction: column;
+    align-items: center;
+}
+
+h2, p{
+    letter-spacing: 3px;
+}
+
+h2{
+    font-size: 3.7em;
+    line-height: 1.2em;
+    font-weight: 400;
+}
+
+p{
+    font-size: 1em;
+    font-weight: 300;
 }
 
 ul{
@@ -19,7 +36,7 @@ ul{
 li, button{
     column-gap: 10px;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 li{
@@ -53,7 +70,6 @@ button i{
 
 header{
     width: 75vw;
-    margin-top: 3vh;
     background-color: #c8c8c8;
     border-radius: 100px;
     padding: 2vh 0;
@@ -90,4 +106,90 @@ header ul{
 
 li:hover, button:hover{
     cursor: pointer;
+}
+
+#main-card{
+    width: 80vw;
+    margin: 10vh 0;
+    display: grid;
+    grid-template-columns: 1.3fr 2fr 2fr 1.3fr;
+    grid-template-rows: 3fr 10fr 8fr 8fr 10fr 3fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#main-card h2{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#main-card p{
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+    width: 90%;
+}
+
+
+#main-card button{
+    text-transform: uppercase;
+    height: 70%;
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
+}
+
+#main-card button i{
+    margin-left: 2vw;
+    font-size: 2em;
+}
+
+#card-img{
+    grid-row: 2/5;
+    grid-column: 3;
+    background-color: #000;
+    border-radius: 35%;
+    width: 90%;
+    height: 43vh;
+}
+
+
+#languages{
+    grid-row: 4;
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#languages span{
+    font-weight: bold;
+    padding: 10px 30px;
+    height: fit-content;
+    background-color: #c8c8c8;
+    border-radius: 60px;
+}
+
+#linkedin_btn{
+    grid-row: 5;
+    grid-column: 2;
+    background-color: #fff;
+}
+
+#github_btn{
+    grid-row: 5;
+    grid-column: 3;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #000;
+    border-radius: 10px;
 }

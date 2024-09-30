@@ -12,18 +12,32 @@
     <title>Portifólio</title>
 </head>
 <body>
-    <header>
-        <ul class="flex">
-            <li><i class="bi bi-house"></i>Home</li>
-            <li><i class="bi bi-person-badge"></i>Sobre Mim</li>
-            <li><i class="bi bi-lightning"></i>Habilidades</li>
-            <li><i class="bi bi-person-lines-fill"></i>Contato</li>
-            <button id="curriculo">Curriculo<i class="bi bi-download"></i></button>
-            <button id="toggleMode"><i class="bi bi-moon-stars"></i></button>
-        </ul>
-    </header>
     <main class="flex">
-
+        <header>
+            <ul class="flex">
+                <li><i class="bi bi-house"></i>Home</li>
+                <li><i class="bi bi-person-badge"></i>Sobre Mim</li>
+                <li><i class="bi bi-lightning"></i>Habilidades</li>
+                <li><i class="bi bi-person-lines-fill"></i>Contato</li>
+                <button id="curriculo">Curriculo<i class="bi bi-download"></i></button>
+                <button id="toggleMode"><i class="bi bi-moon-stars"></i></button>
+            </ul>
+        </header>
+        <div id="main-card">  
+            <h2><b>Olá!</b> Sou a Larissa Cravo</h2>
+            <div id="card-img"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <div id="languages">
+                <span>Python</span>
+                <span>HTML/CSS/JS</span>
+                <span>MySQL</span>
+                <span>C#</span>
+                <span>React</span>
+            </div>
+            <button id="linkedin_btn" onclick="goLink('linkedin')">ver linkedin<i class="bi bi-linkedin"></i></button>
+            <button id="github_btn" onclick="goLink('github')">ver github<i class="bi bi-github"></i></button>
+        </div>
     </main>
+
 </body>
 </html>
