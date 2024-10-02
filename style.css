@@ -79,6 +79,7 @@ header{
 header ul{
     align-items: center;
     column-gap: 5%;
+    margin: 0;
 }
 
 .flex{
@@ -189,15 +190,18 @@ li:hover, button:hover{
 
 #projects{
     position: relative;
+    height: 10vh;
 }
 
 h1{
     position: absolute;
+    z-index: -10;
+    right: 0;
     /* ir mudando de acordo com o spining */
     font-size: 15em;
     font-weight: 400;
     letter-spacing: 55px;
-    background: linear-gradient(90deg, #a0a0a0, #ffffff);
+    background: linear-gradient(90deg, #a0a0a0, #e5e5e5);
     background-clip: text;
     color: transparent;
 
@@ -207,10 +211,10 @@ h1{
 
 @keyframes titlesAnimation{
     from{
-        transform: translateX(-10%);
+        transform: translateX(-30%);
     }
     to{
-        transform: translateX(45%);
+        transform: translateX(20%);
     }
 }
 
