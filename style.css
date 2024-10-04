@@ -1,3 +1,17 @@
+:root {
+    --gray-500: #a0a0a0; /* Cor usada no começo do degradê dos h1 */
+    --gray-300: #c8c8c8; 
+    --gray-100: #e5e5e5; /* Cor usada no final do degradê dos h1 */
+    --gray-600: #6f6f6f; /* Cor da linha vertical */
+    --gray-900: #333333; /* Cor dos principais textos */
+    --gray-1100: #141414;
+    
+     /* Cores usadas na parte de Habilidades */
+    --soft-red: #ff5050;
+    --soft-yellow: #b1be61;
+    --soft-green: #719d71; 
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -197,7 +211,6 @@ h1{
     position: absolute;
     z-index: -10;
     right: 0;
-    /* ir mudando de acordo com o spining */
     font-size: 15em;
     font-weight: 400;
     letter-spacing: 55px;
