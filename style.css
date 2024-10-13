@@ -33,6 +33,11 @@ main{
     align-items: center;
 }
 
+a, a:hover{
+    text-decoration: none;
+    color: #000;
+}
+
 h2, p{
     letter-spacing: 3px;
 }
@@ -95,7 +100,7 @@ button i{
 }
 
 header{
-    width: 75vw;
+    width: 85vw;
     background-color: #c8c8c8;
     border-radius: 100px;
     padding: 2vh 0;
@@ -104,12 +109,17 @@ header{
 
 header ul{
     align-items: center;
-    column-gap: 5%;
+    column-gap: 4%;
     margin: 0;
+}
+
+header div{
+    column-gap: 30px;
 }
 
 .flex{
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -343,3 +353,8 @@ h1{
     background-color: black;
     border-radius: 10px;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+  
