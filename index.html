@@ -41,15 +41,18 @@
 </head>
 
 <body>
-    <main class="flex">
+    <main class="flex" id="main">
         <header>
             <ul class="flex">
-                <li><i class="bi bi-house"></i>Home</li>
-                <li><i class="bi bi-person-badge"></i>Sobre Mim</li>
-                <li><i class="bi bi-lightning"></i>Habilidades</li>
-                <li><i class="bi bi-person-lines-fill"></i>Contato</li>
-                <button id="curriculo">Curriculo<i class="bi bi-download"></i></button>
-                <button id="toggleMode"><i class="bi bi-moon-stars"></i></button>
+                <li><a href=""><i class="bi bi-house"></i>Home</a></li>
+                <li><a href="#about"><i class="bi bi-person-badge"></i>Sobre Mim</a></li>
+                <li><a href="#projects"><i class="bi bi-window-fullscreen"></i> Projetos</a></li>
+                <li><a href="#habilities"><i class="bi bi-lightning"></i>Habilidades</a></li>
+                <li><a href="#contact"><i class="bi bi-person-lines-fill"></i>Contato</a></li>
+                <div class="flex">
+                    <button id="curriculo">Curriculo<i class="bi bi-download"></i></button>
+                    <button onclick="darkMode()" id="toggleMode"><i id="switch" class="bi bi-moon-stars"></i></button>
+                </div>
             </ul>
         </header>
         <div id="main-card">
@@ -71,27 +74,32 @@
         <h1>Projetos</h1>
         <div id="carrousel">
             <div class="owl-carousel owl-theme">
-                <div onclick="flipCard('f-proj-um', 'b-proj-um')" class="item card" id="proj-um">
-                    <div class="card_front invisible" id="f-proj-um">
-                        <img src="img/Projects/imgTeste.jpg" alt="">
-                    </div>
-                    <div class="card_back" id="b-proj-um">
-                        <div class="card-body">
-                            <div class="row">
-                                <h3 class="card-title">Projeto 1</h3>
-                                <a href="#" class="btn btn-light"><i class="bi bi-github"></i></a>
-                            </div>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <div class="languages" id="languagesUsed">
-                                <span>HTML/CSS/JS</span>
+                <div onclick='flipCard("f-proj-um", "b-proj-um", this)' class="item card" id="proj-um">
+                    <div class="card_inner">
+                        <div class="card_front" id="f-proj-um">
+                            <img src="img/Projects/imgTeste.jpg" alt="">
+                        </div>
+                        <div class="card_back invisible" id="b-proj-um">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h3 class="card-title">Projeto 1</h3>
+                                    <a href="#" class="btn btn-light"><i class="bi bi-github"></i></a>
+                                </div>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                    of the card's content.</p>
+                                <div class="languages" id="languagesUsed">
+                                    <span>HTML/CSS/JS</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
     </section>
+    <section id="habilities">
+    </section>
+
 </body>
 
 </html>
