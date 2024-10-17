@@ -5,17 +5,27 @@
     --gray-600: #6f6f6f; /* Cor da linha vertical */
     --gray-900: #333333; /* Cor dos principais textos */
     --gray-1100: #141414;
-    
+    --black: #000;
+    /* A cor --white já está no bootstrap */
      /* Cores usadas na parte de Habilidades (podem ser trocadas)*/
     --soft-red: #ff5050;
     --soft-yellow: #b1be61;
     --soft-green: #719d71; 
+    --main-bg-color: red;
 }
 
-/* .darkMode{
-    aternar as cores das variaveis
-    --gray-1100: #ff0000;
-} */
+.darkMode{
+    /* aternar as cores das variaveis */
+    --gray-500: #cfcfcf; /* Cor usada no começo do degradê dos h1  #494949;*/
+    --gray-300: #484848; 
+    --gray-100: #414141; /* Cor usada no final do degradê dos h1 */
+    --gray-600: #464646; /* Cor da linha vertical */
+    --gray-900: #333333; /* Cor dos principais textos */
+    --gray-1100: var(--dark);
+
+    --black: #fff;
+    --white: #000;
+}
 
 *{
     margin: 0;
@@ -26,6 +36,9 @@
 body{
     font-family: "Inter", sans-serif;
     padding: 3vh 0;
+    background-color: var(--white);
+    overflow-x: hidden;
+    
 }
 
 main{
@@ -35,7 +48,7 @@ main{
 
 a, a:hover{
     text-decoration: none;
-    color: #000;
+    color: var(--black);
 }
 
 h2, p{
@@ -47,6 +60,11 @@ h2{
     font-size: 3.5em;
     line-height: 1.2em;
     font-weight: 400;
+    color: var(--black);
+}
+
+h3, p{
+    color: white;
 }
 
 h3{
@@ -73,6 +91,7 @@ li, button{
 li{
     position: relative;
     letter-spacing: 5px;
+    font-size: 0.9em;
 }
 
 li i{
@@ -100,21 +119,21 @@ button i{
 }
 
 header{
-    width: 85vw;
-    background-color: #c8c8c8;
+    width: fit-content;
+    background-color: var(--gray-300);
     border-radius: 100px;
-    padding: 2vh 0;
+    padding: 2vh 5vw;
     text-transform: uppercase;
 }
 
 header ul{
     align-items: center;
-    column-gap: 4%;
+    column-gap: 3.5em;
     margin: 0;
 }
 
 header div{
-    column-gap: 30px;
+    column-gap: 15px;
 }
 
 .flex{
@@ -123,7 +142,9 @@ header div{
     justify-content: center;
 }
 
+
 #curriculo{
+    transition: .3s;
     padding: 15px 30px;
     border-radius: 30px;
 }
@@ -131,14 +152,18 @@ header div{
 #toggleMode{
     width: 50px;
     height: 50px;
+    padding-left: 3px;
+    border: none;
     border-radius: 50%;
     transition: .5s;
+    background-color: var(--white);
+    color: var(--black)
 }
 
+#curriculo:hover, 
 #toggleMode:hover{
-    background-color: #000;
-    color: #fff;
-    border: none;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 li:hover, button:hover{
@@ -167,6 +192,7 @@ li:hover, button:hover{
     grid-row: 3;
     width: 90%;
     text-align: center;
+    color: var(--black);
 }
 
 
@@ -188,7 +214,7 @@ li:hover, button:hover{
 #card-img{
     grid-row: 2/5;
     grid-column: 3;
-    background-color: #000;
+    background-color: var(--black);
     border-radius: 35%;
     width: 90%;
     height: 50vh;
@@ -213,7 +239,7 @@ li:hover, button:hover{
     border-radius: 60px;
     margin-bottom: 10px;
     padding: 10px 30px;
-    color: #000;
+    color: var(--black);
 }
 
 /* Pode mudar (teste de cor) */
@@ -226,6 +252,7 @@ li:hover, button:hover{
     grid-row: 5;
     grid-column: 2;
     background-color: #fff;
+    border: 1px solid var(--black);
 }
 
 #github_btn{
@@ -233,12 +260,12 @@ li:hover, button:hover{
     grid-column: 3;
     background-color: #000;
     color: #fff;
-    border: none;
+    border: 1px solid var(--black);
 }
 
 #projects{
     position: relative;
-    height: 70vh;
+    height: 80vh;
 }
 
 h1{
@@ -248,22 +275,41 @@ h1{
     font-size: 15em;
     font-weight: 400;
     letter-spacing: 55px;
-    background: linear-gradient(90deg, #a0a0a0, #e5e5e5);
+    background: linear-gradient(90deg, var(--gray-500), var(--gray-100));
     background-clip: text;
     color: transparent;
+}
 
-    animation: titlesAnimation;
+#projects h1{
+    animation: leftToRight;
     animation-timeline: view();
 }
 
-@keyframes titlesAnimation{
+@keyframes leftToRight{
     from{
         transform: translateX(-30%);
     }
     to{
-        transform: translateX(0);
+        transform: translateX(-5%);
     }
 }
+
+/* 
+#h h1{
+    animation: rightToLeft;
+    animation-timeline: view();
+}
+
+@keyframes rightToLeft{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(0);
+    }
+} */
+
+
 #carrousel {
     position: absolute;
     top: 23vh;
@@ -280,7 +326,7 @@ h1{
     height: 45vh;
     border-radius: 30px;
     background-color: var(--gray-1100);
-    perspective: 1000px; /* Para efeito 3D */
+    perspective: 1000px;
 }
 
 .card_inner {
@@ -322,7 +368,7 @@ h1{
     display: flex;
     flex-direction: column;
     row-gap: 2vh;
-    color: white;
+    color: var(--white);
 }
 
 .row {
@@ -345,16 +391,20 @@ h1{
     display: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar{
     width: 10px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: black;
+    background-color: var(--black);
     border-radius: 10px;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-  
+::selection{
+    color: white;
+    background-color: var(--gray-600);
+}  
