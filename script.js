@@ -3,6 +3,8 @@ const links = {
     "github": "https://github.com/L4r1ss4Cr4v0/",
 }
 
+const originalText = []
+
 function goLink(site){
     window.open(links[site], "_blank"); 
 }
@@ -22,6 +24,33 @@ function darkMode(){
         document.getElementById("switch").classList.replace("bi-brightness-high","bi-moon-stars");
     }
 }
+
+window.addEventListener('resize', () => {
+    const itens = document.querySelectorAll('header ul li a');
+
+    itens.forEach((i) => {
+        originalText.push(i.textContent)
+    })
+
+    if (window.innerWidth < 1290) {
+        itens.forEach((item, index) => {
+            const icons = document.querySelectorAll('header ul li a i');
+            if (icons[index]) {
+                const iconClone = icons[index].cloneNode(true);
+                item.textContent = "";
+                item.appendChild(iconClone);
+            }
+        });
+    } else {
+        itens.forEach((item, index) => {
+            const icons = document.querySelectorAll('header ul li a i');
+            if (icons[index]) {
+                item.textContent = originalText[index];
+                item.insertBefore(icons[index], item.firstChild); 
+            }
+        });
+    }
+});
 
 
 $('.owl-carousel').owlCarousel({
