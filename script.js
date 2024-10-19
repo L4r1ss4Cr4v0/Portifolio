@@ -25,6 +25,35 @@ function darkMode(){
     }
 }
 
+
+
+
+
+
+const txtCuriculo = document.getElementById('curriculo').innerText;
+const curriculo = document.getElementById('curriculo');
+const icon = curriculo.children[0]
+
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 800) {
+        curriculo.innerText = "";
+    } else {
+        curriculo.innerText = txtCuriculo
+    }
+    curriculo.appendChild(icon);
+});
+
+
+
+
+// document.addEventListener('click', (e) => {
+//     console.log(e)
+// })
+
+
+
+
 window.addEventListener('resize', () => {
     const itens = document.querySelectorAll('header ul li a');
 
@@ -32,7 +61,7 @@ window.addEventListener('resize', () => {
         originalText.push(i.textContent)
     })
 
-    if (window.innerWidth < 1290) {
+    if (window.innerWidth <= 1200) {
         itens.forEach((item, index) => {
             const icons = document.querySelectorAll('header ul li a i');
             if (icons[index]) {
@@ -51,6 +80,8 @@ window.addEventListener('resize', () => {
         });
     }
 });
+
+
 
 
 $('.owl-carousel').owlCarousel({

@@ -27,6 +27,32 @@
     --white: #000;
 }
 
+@media (max-width: 1200px){
+    header ul{
+        column-gap: 5% !important;
+    }
+    /* Transforma o icone em visível */
+    li i{
+        position: static !important;
+        font-size: 2em;
+        opacity: 1 !important;
+        margin: 0 !important;
+    }
+}
+@media (max-width: 800px){
+    header{
+        width: 100vw !important;
+    }
+
+    #curriculo{
+        padding: 0 0 0 3px !important;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50% !important;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -37,8 +63,6 @@ body{
     font-family: "Inter", sans-serif;
     padding: 3vh 0;
     background-color: var(--white);
-    overflow-x: hidden;
-    
 }
 
 main{
@@ -88,10 +112,14 @@ li, button{
     font-weight: 400;
 }
 
+button:focus{
+    outline: none;
+}
+
 li{
     position: relative;
     letter-spacing: 5px;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 li i{
@@ -122,13 +150,15 @@ header{
     width: fit-content;
     background-color: var(--gray-300);
     border-radius: 100px;
+    width: 85vw;
     padding: 2vh 5vw;
     text-transform: uppercase;
+    text-align: center;
 }
 
 header ul{
     align-items: center;
-    column-gap: 3.5em;
+    column-gap: 45px;
     margin: 0;
 }
 
@@ -174,8 +204,8 @@ li:hover, button:hover{
     width: 80vw;
     margin: 10vh 0;
     display: grid;
-    grid-template-columns: 2fr 6fr 6fr 2fr;
-    grid-template-rows: 2fr 5fr 3fr 4fr 5fr 2fr;
+    grid-template-columns: 3fr 13fr 11fr 3fr;
+    grid-template-rows: 2fr 5fr 5fr 4fr 5fr 2fr;
     align-items: center;
     justify-items: center;
 }
@@ -197,13 +227,13 @@ li:hover, button:hover{
 
 
 #main-card button{
-    max-height: 10vh;
+    max-height: 13vh;
     text-transform: uppercase;
-    height: 80%;
-    width: 70%;
+    height: 100%;
+    width: 25vw;
     justify-self: center;
     align-self: center;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 #main-card button i{
@@ -217,7 +247,7 @@ li:hover, button:hover{
     background-color: var(--black);
     border-radius: 35%;
     width: 90%;
-    height: 50vh;
+    height: 55vh;
 }
 
 
@@ -252,7 +282,7 @@ li:hover, button:hover{
     grid-row: 5;
     grid-column: 2;
     background-color: #fff;
-    border: 1px solid var(--black);
+    border: 0.5px solid var(--black);
 }
 
 #github_btn{
@@ -290,7 +320,7 @@ h1{
         transform: translateX(-30%);
     }
     to{
-        transform: translateX(-5%);
+        transform: translateX(0);
     }
 }
 
@@ -385,7 +415,6 @@ h1{
     width: 60px;
     height: 60px;
 }
-
 
 .invisible{
     display: none;
