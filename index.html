@@ -36,7 +36,6 @@
 
     <script src="script.js" defer></script>
 
-
     <title>Portifólio</title>
 </head>
 
@@ -44,13 +43,14 @@
     <main class="flex" id="main">
         <header>
             <ul class="flex">
+                <li class="invisible"><i class="bi bi-list"></i></li>
                 <li><a href=""><i class="bi bi-house"></i>Home</a></li>
                 <li><a href="#about"><i class="bi bi-person-badge"></i>Sobre Mim</a></li>
                 <li><a href="#projects"><i class="bi bi-window-fullscreen"></i> Projetos</a></li>
                 <li><a href="#habilities"><i class="bi bi-lightning"></i>Habilidades</a></li>
                 <li><a href="#contact"><i class="bi bi-person-lines-fill"></i>Contato</a></li>
                 <div class="flex">
-                    <button id="curriculo">Curriculo<i class="bi bi-download"></i></button>
+                    <button id="curriculo" data-text="Currículo">Currículo<i class="bi bi-download"></i></button>
                     <button onclick="darkMode()" id="toggleMode"><i id="switch" class="bi bi-moon-stars"></i></button>
                 </div>
             </ul>
@@ -96,8 +96,6 @@
                 </div>
             </div>
         </div>        
-    </section>
-    <section id="habilities">
     </section>
 
 </body>
