@@ -112,7 +112,7 @@ h3, p{
 }
 
 h3{
-    font-size: 3em;
+    /* font-size: 3em; */
     line-height: 1.2em;
     font-weight: 400;  
     letter-spacing: 10px;
@@ -313,6 +313,10 @@ li:hover, button:hover{
     border: 1px solid var(--black);
 }
 
+#aboutMe h1{
+    font-size: 10em;
+}
+
 .movLeftToRight{
     animation: leftToRight;
     animation-timeline: view();
@@ -405,7 +409,6 @@ li:hover, button:hover{
 
 .row {
     padding: 2%;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -413,7 +416,8 @@ li:hover, button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5em;
+    /* font-size: 2.5em; */
+    font-size: 0.3em;
     width: 60px;
     height: 60px;
 }
@@ -424,8 +428,13 @@ li:hover, button:hover{
 
 #aboutMe p{
     color: var(--black); 
-    top: 20vh; 
     font-weight: 350;
+    font-size: 1.6em;
+    width: 80%;
+}
+
+#aboutMe > p{
+    top: 20vh; 
     text-align: justify;
     width: 70%; 
     font-size: 2em;
@@ -435,9 +444,10 @@ li:hover, button:hover{
 #saibaMais{
     display: flex;
     align-items: center;
-    width: 99vw;
+    width: 100%;
     justify-content: center;
-    top: 55vh;
+    top: 80vh; 
+    /* 55VH */
     column-gap: 100px;
     font-size: 1.8em;
     color: var(--gray-600);
@@ -452,6 +462,60 @@ li:hover, button:hover{
     font-weight: 250 !important;
     font-size: 0.8em !important;
     padding: 15px 30px;
+}
+
+.container-fluid{
+    top: 100vh;
+    /* 70vh */
+}
+
+.row:first-child{
+    color: var(--black);
+    font-size: 7em;
+    font-weight: 500;
+    padding-bottom: 0;
+}
+
+#cursos:hover{
+    cursor: url("img/Cursors/Open\ Book.png"), auto;
+    transition: .5s;
+}
+
+#cursorPy:hover{
+    cursor: url("img/Cursors/Snake.png"), auto;
+}
+
+#cursorTrophy:hover{
+    cursor: url("img/Cursors/Trophy.png"), auto;
+}
+
+#cursorCotemig:hover{
+    cursor: url("img/Cursors/Desktop\ Computer.png"), auto;
+}
+
+.row+.row{
+    padding-top: 0;
+}
+
+.square{
+    width: 60px;
+    height: 60px;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 2em;
+}
+
+.line{
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    z-index: -99;
+    background-color: var(--black);
+}
+
+.rotate{
+    rotate: 90deg;
 }
 
 html {
