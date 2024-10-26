@@ -53,6 +53,18 @@
     }
 }
 
+@media (max-width: 1800px){
+    #aboutMe h1{
+        font-size: 11em !important;
+    }
+    #saibaMais{
+        top: 80vh !important;
+    }
+    #aboutMe .container-fluid{
+        top: 100vh !important;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -86,7 +98,9 @@ section > *{
 }
 
 h1{
+    position: absolute;
     z-index: -10;
+    top: 0;
     right: 0;
     font-size: 15em;
     font-weight: 400;
@@ -223,7 +237,7 @@ li:hover, button:hover{
 
 #main-card{
     width: 80vw;
-    margin: 10vh 0;
+    /* margin: 10vh 0; */
     display: grid;
     grid-template-columns: 3fr 10fr 11fr 3fr;
     grid-template-rows: 2fr 5fr 5fr 4fr 5fr 2fr;
@@ -318,6 +332,10 @@ li:hover, button:hover{
     font-size: 12em;
 }
 
+#aboutMe{
+    height: 250vh;
+}
+
 .movLeftToRight{
     animation: leftToRight;
     animation-timeline: view();
@@ -349,8 +367,9 @@ li:hover, button:hover{
 
 
 #carrousel {
-    top: 23vh;
+    position: absolute;
     right: 0;
+    top: 25vh;
     width: 95%;
 }
 
@@ -464,9 +483,8 @@ li:hover, button:hover{
     padding: 15px 30px;
 }
 
-.container-fluid{
+#aboutMe .container-fluid{
     top: 70vh;
-    /* 70vh */
 }
 
 .row:first-child{
@@ -521,16 +539,49 @@ li:hover, button:hover{
 footer{
     position: relative;
     bottom: 0;
-    top: 100vh;
+    background-color: black; 
+    color: white;
+}
+
+footer .row+.row .col{
+    text-align: center;
+    justify-self: start;
+    align-self: center;
+}
+
+nav{
+    column-gap: 30px;
+    font-size: 1.5em;
+}
+
+footer .row+.row{
+    margin-top: 50px;
+    padding-bottom: 0;
+}
+
+footer .row{
+    height: 15vh;
 }
 
 footer p{
-    font-size: 0.1em;
+    font-size: 0.13em;
+    width: 50%;
 }
 
 footer h2{
-    font-size: 0.2em;
+    width: 35%;
+    font-size: 0.15em;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
     color: white;
+}
+
+footer a{
+    color: var(--white);
+    font-weight: 300;
+    letter-spacing: 4px;
 }
 
 html {
