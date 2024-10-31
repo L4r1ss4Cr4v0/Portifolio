@@ -40,9 +40,7 @@
     }
 }
 @media (max-width: 800px){
-    header{
-        width: 100vw !important;
-    }
+
 
     #curriculo{
         padding: 0 0 0 3px !important;
@@ -76,6 +74,7 @@ body{
     padding: 3vh 0;
     background-color: var(--white);
     height: 100%;
+    overflow-x: hidden;
 }
 
 main{
@@ -98,7 +97,6 @@ section > *{
 }
 
 h1{
-    position: absolute;
     z-index: -10;
     top: 0;
     right: 0;
@@ -123,7 +121,7 @@ h2{
 }
 
 h3, p{
-    color: white;
+    color: var(--white);
 }
 
 h3{
@@ -136,6 +134,10 @@ h3{
 p{
     font-size: 1em;
     font-weight: 300;
+}
+
+span{
+    letter-spacing: 5px;
 }
 
 ul{
@@ -189,6 +191,7 @@ header{
     padding: 2vh 5vw;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 3vh;
 }
 
 header ul{
@@ -209,9 +212,15 @@ header div{
 
 
 #curriculo{
+    background-color: var(--white);
+    color: var(--black);
     transition: .3s;
     padding: 15px 30px;
     border-radius: 30px;
+}
+
+.darkMode #curriculo{
+    border: none;
 }
 
 #toggleMode{
@@ -231,13 +240,12 @@ header div{
     color: var(--white);
 }
 
-li:hover, button:hover{
-    cursor: pointer;
+li:hover, button:hover, .card:hover{
+    cursor: url("img/Cursors/Pointer.png"), pointer !important;
 }
 
 #main-card{
     width: 80vw;
-    /* margin: 10vh 0; */
     display: grid;
     grid-template-columns: 3fr 10fr 11fr 3fr;
     grid-template-rows: 2fr 5fr 5fr 4fr 5fr 2fr;
@@ -298,6 +306,7 @@ li:hover, button:hover{
 }
 
 .languages span{
+    letter-spacing: 0;
     font-weight: bold;
     height: fit-content;
     background-color: var(--gray-300);
@@ -333,8 +342,9 @@ li:hover, button:hover{
 }
 
 #aboutMe{
-    height: 250vh;
+    height: 180vh;
 }
+
 
 .movLeftToRight{
     animation: leftToRight;
@@ -350,21 +360,29 @@ li:hover, button:hover{
     }
 }
 
-/* 
-#h h1{
+.movrightToLeft {
+    /* font-size: 10em;
+    position: relative; */
     animation: rightToLeft;
     animation-timeline: view();
+    white-space: nowrap; 
 }
 
-@keyframes rightToLeft{
-    from{
-        transform: translateX(0);
-    }
-    to{
-        transform: translateX(0);
-    }
-} */
+#habilities {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+}
 
+@keyframes rightToLeft {
+    from {
+        transform: translateX(30%)
+    }
+    to {
+        transform: translateX(0)
+    }
+}
 
 #carrousel {
     position: absolute;
@@ -472,7 +490,6 @@ li:hover, button:hover{
     color: var(--gray-600);
 }
 
-#saibaMais span,
 #saibaMais button{
     letter-spacing: 5px;
 }
@@ -491,7 +508,6 @@ li:hover, button:hover{
     color: var(--black);
     font-size: 7em;
     font-weight: 500;
-    padding-bottom: 0;
 }
 
 #cursos:hover{
@@ -536,16 +552,44 @@ li:hover, button:hover{
     rotate: 90deg;
 }
 
+#container-habilities{
+    font-size: 2em;
+    text-align: right;
+    column-gap: 35px;
+}
+
+#container-habilities > .flex{
+    flex-direction: column;
+    column-gap: 10px;
+    align-items: flex-end;
+    row-gap: 80px;
+    font-weight: bold;
+    line-height: 0.5em;
+    letter-spacing: 2px;
+}
+
+
+
+.progress{
+    width: 50vw;
+}
+
+.progress-bar{
+    border-radius: 50px;
+}
+
+
 footer{
     position: relative;
     bottom: 0;
-    background-color: black; 
-    color: white;
+    background-color:var(--black); 
+    color: var(--gray-100);
+    width: 98% !important;
+    padding: 20px;
 }
 
 footer .row+.row .col{
     text-align: center;
-    justify-self: start;
     align-self: center;
 }
 
@@ -555,33 +599,38 @@ nav{
 }
 
 footer .row+.row{
-    margin-top: 50px;
     padding-bottom: 0;
-}
-
-footer .row{
-    height: 15vh;
+    height: 10vh;
 }
 
 footer p{
+    color: var(--white);
     font-size: 0.13em;
     width: 50%;
 }
 
 footer h2{
-    width: 35%;
+    width: 400px;
     font-size: 0.15em;
     line-height: 1.2em;
     font-weight: 600;
     margin-bottom: 20px;
     text-transform: uppercase;
-    color: white;
+    color: var(--gray-100);
 }
 
 footer a{
-    color: var(--white);
+    color: var(--gray-100);
     font-weight: 300;
     letter-spacing: 4px;
+}
+
+footer span{
+    font-weight: 500;
+}
+
+footer i:hover{
+    cursor: url("img/Cursors/Pointer.png"), auto;
 }
 
 html {
