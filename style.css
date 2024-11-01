@@ -28,6 +28,7 @@
 }
 
 @media (max-width: 1200px){
+
     header ul{
         column-gap: 5% !important;
     }
@@ -37,6 +38,10 @@
         font-size: 2em;
         opacity: 1 !important;
         margin: 0 !important;
+    }
+
+    #habilities h1{
+        font-size: 3em !important;
     }
 }
 @media (max-width: 800px){
@@ -159,14 +164,14 @@ li{
     font-size: 0.8em;
 }
 
-li i{
+header li i{
     position: absolute;
     opacity: 0;
     margin-left: 10%;
     transition: .3s;
 }
 
-li:hover i{
+header li:hover i{
     opacity: 1;
     margin-left: -1.6vw;
 }
@@ -240,7 +245,7 @@ header div{
     color: var(--white);
 }
 
-li:hover, button:hover, .card:hover{
+header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     cursor: url("img/Cursors/Pointer.png"), pointer !important;
 }
 
@@ -337,14 +342,13 @@ li:hover, button:hover, .card:hover{
     border: 1px solid var(--black);
 }
 
+#aboutMe{
+    height: 170vh;
+}
+
 #aboutMe h1{
     font-size: 12em;
 }
-
-#aboutMe{
-    height: 180vh;
-}
-
 
 .movLeftToRight{
     animation: leftToRight;
@@ -369,11 +373,27 @@ li:hover, button:hover, .card:hover{
 }
 
 #habilities {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 100vw;
-    display: flex;
-    height: 100vh;
+    height: 180vh;
+    row-gap: 20vh;
 }
+
+#habilities>div, #contact>div{
+    position: static;
+}
+
+#habilities li::marker{
+    font-weight: bold;
+}
+
+#habilities div+div{
+    line-height: 2em;
+    font-size: 2em;
+}
+
 
 @keyframes rightToLeft {
     from {
@@ -548,6 +568,10 @@ li:hover, button:hover, .card:hover{
     background-color: var(--black);
 }
 
+#habilities .line{
+    position: static
+}
+
 .rotate{
     rotate: 90deg;
 }
@@ -556,6 +580,7 @@ li:hover, button:hover, .card:hover{
     font-size: 2em;
     text-align: right;
     column-gap: 35px;
+    color: var(--black);
 }
 
 #container-habilities > .flex{
@@ -568,16 +593,13 @@ li:hover, button:hover, .card:hover{
     letter-spacing: 2px;
 }
 
-
-
 .progress{
     width: 50vw;
 }
 
-.progress-bar{
+.progress, .progress-bar{
     border-radius: 50px;
 }
-
 
 footer{
     position: relative;
@@ -625,12 +647,12 @@ footer a{
     letter-spacing: 4px;
 }
 
-footer span{
-    font-weight: 500;
+footer a:hover{
+    color: var(--gray-100);
 }
 
-footer i:hover{
-    cursor: url("img/Cursors/Pointer.png"), auto;
+footer span{
+    font-weight: 500;
 }
 
 html {
