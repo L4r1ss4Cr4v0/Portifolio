@@ -712,6 +712,10 @@ ol+div+ul li{
     perspective: 1000px;
 }
 
+.card_back i{
+    font-size: 8em;
+}
+
 .card_inner {
     position: relative;
     width: 100%;
