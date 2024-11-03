@@ -27,7 +27,32 @@
     --white: #000;
 }
 
+@media (max-width: 1800px){
+
+    .square{
+        width: 60px !important;
+        height: 60px !important;
+    }
+    #main-card{
+        grid-template-columns: 3fr 15fr 11fr 3fr !important;
+    }
+    #aboutMe h1{
+        font-size: 11em !important;
+    }
+    #saibaMais{
+        top: 70vh !important;
+    }
+}
+
 @media (max-width: 1200px){
+
+    footer{
+        top: 110vh !important;
+    }
+
+    #habilities{
+        top: 80vh !important;
+    }
 
     header ul{
         column-gap: 5% !important;
@@ -40,12 +65,145 @@
         margin: 0 !important;
     }
 
+    #contact{
+        top: 85vh !important;
+    }
+
+    #main-card{
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 50% 1fr 1fr 1fr 1fr !important;
+    }
+
+    #card-img{
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        justify-self: center;
+    }
+
+    #languagesPerfil{
+        grid-column: 1 !important;
+        grid-row: 4 !important;  
+        justify-self: center; 
+    }
+
+    #main-card h2{
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+        text-align: center;     
+        justify-self: center; 
+    }
+
+    #main-card p{
+        grid-column: 1 !important;
+        grid-row: 3 !important;
+        justify-self: center;
+        margin: 0 !important;
+    }
+
+    #btn-div{
+        grid-column: 1 !important;
+        grid-row: 5 !important;
+    }
+
+    #aboutMe .container-fluid .row{
+        flex-direction: column;
+    }
+
+    .col{
+        width: 100vh;
+    }
+
+    .col div{
+        display: flex;
+        column-gap: 40px;
+    }
+
     #habilities h1{
         font-size: 3em !important;
     }
+
+    #container-timeline{
+        flex-direction: column;
+        display: flex;
+        align-items: start !important;
+        top: 120vh !important;
+    }
+    
+    .timeline-row{
+        width: 70vw !important;
+        display: flex;
+        column-gap: 30px;
+    }
+
+    #saibaMais{
+        top: 80vh !important;
+    }
 }
+
+@media (max-width: 1000px) {
+
+    footer{
+        top: 220vh !important;
+    }
+    
+    #contact{
+        top: 140vh !important;
+        flex-direction: column;
+        row-gap: 100px;
+    }
+
+    #contact h1+div{
+        width: 300px !important;
+    }
+
+    #habilities{
+        top: 130vh !important;
+    } 
+    #container-habilities+div{
+        flex-direction: column;
+    }
+
+    #habilities .line{
+        rotate: 180deg;
+    }
+    
+    #softSkills{
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 800px){
 
+    #contact div+div{
+        width: 100% !important;
+    }
+    
+    footer{
+        top: 330vh !important;
+    }
+    #contact{
+        top: 230vh !important;
+    }
+
+    #habilities{
+        top: 210vh !important;
+    } 
+
+    #saibaMais{
+        top: 120vh !important;
+    }
+
+    #saibaMais p{
+        left: 0;
+    }
+
+    #container-timeline{
+        top: 170vh !important;
+    }
+
+    #main-card{
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr !important;
+    }
 
     #curriculo{
         padding: 0 0 0 3px !important;
@@ -55,18 +213,115 @@
         border-radius: 50% !important;
     }
 }
+@media (max-width: 680px){
 
-@media (max-width: 1800px){
+    footer{
+        top: 400vh !important;
+    }
+
+    #contact{
+        top: 300vh !important;
+    }
+
+    #habilities{
+        top: 250vh !important;
+    } 
+
     #aboutMe h1{
-        font-size: 11em !important;
+        font-size: 5em !important;
     }
-    #saibaMais{
-        top: 80vh !important;
-    }
-    #aboutMe .container-fluid{
-        top: 100vh !important;
+
+    #container-habilities .flex:first-child{
+        display: none;
     }
 }
+
+@media (max-width: 600px){
+
+    footer{
+        top: 430vh !important;
+    }
+
+    #habilities{
+        top: 300vh !important;
+    } 
+
+    #habilities ul{
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 500px){
+
+    footer{
+        top: 450vh !important;
+    }
+
+    #contact{
+        top: 350vh !important;
+    }
+
+    #habilities{
+        top: 330vh !important;
+    } 
+
+    #card-img{
+        width: 250px !important;
+        height: 250px !important;
+    }
+}
+
+@media (max-width: 410px){
+
+    footer{
+        top: 480vh !important;
+    }
+
+    footer h2{
+        font-size: 1.3em !important;
+    }
+
+    footer p{
+        width: 100% !important;
+    }
+    
+    #habilities{
+        top: 370vh !important;
+    } 
+
+    #saibaMais{
+        top: 140vh !important;
+    }
+
+    #contact{
+        top: 400vh !important;
+    }
+
+}
+
+
+@media (max-width: 380px){
+
+    footer{
+        top: 500vh !important;
+    }
+
+    header{
+        width: 100% !important;
+    }
+
+    #saibaMais{
+        top: 150vh !important;
+    }
+
+    #habilities{
+        top: 390vh !important;
+    } 
+
+}
+
+
+
 
 *{
     margin: 0;
@@ -113,7 +368,7 @@ h1{
     color: transparent;
 }
 
-h2, p{
+h2, p, ::placeholder{
     letter-spacing: 3px;
 }
 
@@ -149,12 +404,30 @@ ul{
     list-style: none;
 }
 
+input{
+    border: none;
+    border-bottom: 5px solid var(--black);
+}
+
+textarea{
+    border: 3px solid var(--black);
+    min-height: 30vh;
+    max-height: 50vh;
+    padding: 10px;
+}
+
+input, textarea{
+    color: var(--black);
+    width: 90%;
+    background: none;
+}
+
 li, button{
     column-gap: 10px;
     font-weight: 400;
 }
 
-button:focus{
+button:focus, input:focus, textarea:focus{
     outline: none;
 }
 
@@ -294,8 +567,8 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     grid-column: 3;
     background-color: var(--black);
     border-radius: 35%;
-    width: 90%;
-    height: 55vh;
+    width: 400px;
+    height: 400px;
 }
 
 
@@ -327,23 +600,30 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     background-color: white;
 }
 
-#linkedin_btn{
+#btn-div{
+    grid-column: 2/4;
     grid-row: 5;
-    grid-column: 2;
+    column-gap: 100px;
+}
+
+#linkedin_btn{
     background-color: #fff;
     border: 0.5px solid var(--black);
 }
 
 #github_btn{
-    grid-row: 5;
-    grid-column: 3;
     background-color: #000;
     color: #fff;
     border: 1px solid var(--black);
 }
 
+#main-card button{
+    padding: 20px 10px;
+}
+
 #aboutMe{
-    height: 170vh;
+    height: 270vh;
+    top: 10vh;
 }
 
 #aboutMe h1{
@@ -376,13 +656,22 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100vw;
-    height: 180vh;
+    height: fit-content;
     row-gap: 20vh;
+    top: 100px;
+    color: var(--black);
+
 }
 
 #habilities>div, #contact>div{
     position: static;
+}
+
+ol+div+ul li{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 5% 0;
 }
 
 #habilities li::marker{
@@ -393,7 +682,6 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     line-height: 2em;
     font-size: 2em;
 }
-
 
 @keyframes rightToLeft {
     from {
@@ -416,9 +704,10 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 37vw;
-    height: 45vh;
+    width: 500px;
+    height: 300px;
     border-radius: 30px;
+    margin-right: 100px;
     background-color: var(--gray-1100);
     perspective: 1000px;
 }
@@ -439,17 +728,17 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Esconde o verso da carta */
-    border-radius: 30px; /* Manter o mesmo raio de borda */
+    backface-visibility: hidden; 
+    border-radius: 30px; 
 }
 
 .card_back {
-    transform: rotateY(180deg); /* Vira o verso da carta */
+    transform: rotateY(180deg); 
     padding: 30px;
 }
 
 .card.flipped .card_inner {
-    transform: rotateY(180deg); /* Rotaciona ao clicar */
+    transform: rotateY(180deg); 
 }
 
 .card_front img {
@@ -488,15 +777,10 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     color: var(--black); 
     font-weight: 350;
     font-size: 1.6em;
-    width: 80%;
-}
-
-#aboutMe > p{
-    top: 17vh; 
     text-align: justify;
     width: 70%; 
-    font-size: 2em;
-    right: 30px;
+    top: 20vh;
+    right: 0;
 }
 
 #saibaMais{
@@ -505,29 +789,25 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     width: 100%;
     justify-content: center;
     top: 55vh; 
-    column-gap: 100px;
+    column-gap: 20%;
     font-size: 1.8em;
     color: var(--gray-600);
 }
 
 #saibaMais button{
     letter-spacing: 5px;
-}
-
-#saibaMais button{
     font-weight: 250 !important;
     font-size: 0.8em !important;
-    padding: 15px 30px;
-}
-
-#aboutMe .container-fluid{
-    top: 70vh;
+    padding: 2vh 2vw;
 }
 
 .row:first-child{
     color: var(--black);
-    font-size: 7em;
     font-weight: 500;
+}
+
+.row span{
+    font-size: 6em;
 }
 
 #cursos:hover{
@@ -552,20 +832,26 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
 }
 
 .square{
-    width: 60px;
-    height: 60px;
+    width: 60px !important;
+    height: 60px !important;
     background-color: var(--black);
     color: var(--white);
     font-size: 2em;
+    position: relative;
+    margin-bottom: 30px;
 }
 
 .line{
-    width: 100%;
-    height: 3px;
     position: absolute;
-    top: 50%;
+    right: 0;
+    width: 100vw;
+    height: 3px;
     z-index: -99;
     background-color: var(--black);
+}
+
+.square, .line{
+    align-self: center;
 }
 
 #habilities .line{
@@ -574,6 +860,22 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
 
 .rotate{
     rotate: 90deg;
+}
+
+#container-timeline{
+    top: 100vh;
+    padding-left: 50px;
+    position: relative;
+    align-items: start !important;
+}
+
+#container-timeline span{
+    font-size: 7em;
+    color: var(--black);
+}
+
+.timeline-row{
+    width: calc(100vw/3);
 }
 
 #container-habilities{
@@ -588,6 +890,7 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     column-gap: 10px;
     align-items: flex-end;
     row-gap: 80px;
+    height: fit-content;
     font-weight: bold;
     line-height: 0.5em;
     letter-spacing: 2px;
@@ -601,6 +904,63 @@ header li:hover, button:hover, .card:hover, a:hover, footer i:hover{
     border-radius: 50px;
 }
 
+#contact{
+    justify-content: space-evenly;
+    top: 30vh;
+}
+
+#contact > div:first-of-type{
+    padding: 17vh 5vh;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.4);
+    border: 3px solid rgba(46, 35, 35, 0.2);
+    backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
+}
+
+#contact > div+div{
+    flex-direction: column;
+    row-gap: 60px;
+}
+
+#contact > div{
+    width: 30vw;
+}
+
+#contact > div p{
+    color: var(--black);
+}
+
+#glass-btn{
+    background:transparent;
+    padding: 10px 60px;
+    border: 3px solid var(--black);
+    position: relative;
+    transform: .4s;
+}
+
+#glass-btn::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--black);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .4s;
+}
+
+#glass-btn:hover{
+    color: var(--white);
+}
+
+#glass-btn:hover::after{
+    transform: scaleX(1);
+}
+
 footer{
     position: relative;
     bottom: 0;
@@ -608,6 +968,7 @@ footer{
     color: var(--gray-100);
     width: 98% !important;
     padding: 20px;
+    top: 50vh;
 }
 
 footer .row+.row .col{
@@ -627,13 +988,12 @@ footer .row+.row{
 
 footer p{
     color: var(--white);
-    font-size: 0.13em;
     width: 50%;
 }
 
 footer h2{
     width: 400px;
-    font-size: 0.15em;
+    font-size: 1em;
     line-height: 1.2em;
     font-weight: 600;
     margin-bottom: 20px;
@@ -653,10 +1013,16 @@ footer a:hover{
 
 footer span{
     font-weight: 500;
+    font-size: 1em !important;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+::placeholder{
+    text-transform: uppercase;
+    color: var(--black);
 }
 
 ::-webkit-scrollbar{

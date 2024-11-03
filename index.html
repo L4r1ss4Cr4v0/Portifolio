@@ -58,7 +58,7 @@
         <div id="main-card">
             <h2><b>Olá!</b> Sou a Larissa Cravo</h2>
             <div id="card-img"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <p>Sou técnica em TI e amo construir softwares. Amo trabalhar com inteligência artificial e possuo conhecimento em manutenção de computadores.</p>
             <div class="languages" id="languagesPerfil">
                 <span>Python</span>
                 <span>HTML/CSS/JS</span>
@@ -66,8 +66,10 @@
                 <span>C#</span>
                 <span>React</span>
             </div>
-            <button id="linkedin_btn" onclick="goLink('linkedin')">ver linkedin<i class="bi bi-linkedin"></i></button>
-            <button id="github_btn" onclick="goLink('github')">ver github<i class="bi bi-github"></i></button>
+            <div id="btn-div" class="flex">
+                <button id="linkedin_btn" onclick="goLink('linkedin')">ver linkedin<i class="bi bi-linkedin"></i></button>
+                <button id="github_btn" onclick="goLink('github')">ver github<i class="bi bi-github"></i></button>
+            </div>
         </div>
     </main>
     <section id="projects">
@@ -77,82 +79,90 @@
                 <div onclick='flipCard("f-proj-um", "b-proj-um", this)' class="item card" id="proj-um">
                     <div class="card_inner">
                         <div class="card_front" id="f-proj-um">
-                            <img src="img/Projects/imgTeste.jpg" alt="">
+                            <img src="img/Projects/Vfood.png" alt="">
                         </div>
                         <div class="card_back invisible" id="b-proj-um">
                             <div class="card-body">
                                 <div class="row">
-                                    <h3 class="card-title">Projeto 1</h3>
-                                    <a href="#" class="btn btn-light"><i class="bi bi-github"></i></a>
+                                    <h3 class="card-title">VFood</h3>
+                                    <a href="https://vfoodelivery.netlify.app/" target="_blank" class="btn btn-light"><i class="bi bi-play"></i></a>
                                 </div>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                    of the card's content.</p>
+                                <p class="card-text">Um simples site de delivery de uma empresa focada em comidas saldáveis. Esse foi um dos meus primeiros sites</p>
                                 <div class="languages" id="languagesUsed">
-                                    <span>HTML/CSS/JS</span>
+                                    <span>HTML/CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div onclick='flipCard("f-proj-dois", "b-proj-dois", this)' class="item card" id="proj-dois">
+                    <div class="card_inner">
+                        <div class="card_front" id="f-proj-dois">
+                            <img src="img/Projects/pag_principal.png" alt="">
+                        </div>
+                        <div class="card_back invisible" id="b-proj-um">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h3 class="card-title">CineMust</h3>
+                                    <a href="https://github.com/L4r1ss4Cr4v0/CineMust" target="_blank" class="btn btn-light"><i class="bi bi-github"></i></a>
+                                </div>
+                                <p class="card-text">Um simples site de delivery de uma empresa focada em comidas saldáveis. Esse foi um dos meus primeiros sites</p>
+                                <div class="languages" id="languagesUsed">
+                                    <span>HTML/CSS</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </section>
+
     <section id="aboutMe">
         <h1 class="movLeftToRight">Sobre mim</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, numquam reprehenderit! Quam rerum consectetur labore quisquam harum in ut natus! Cum voluptates adipisci eius? Optio atque eligendi cupiditate ex ad. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>  
+        <p>
+            Sou desenvolvedora, mas sonho em ser engenheira de software.
+            Minha real <b>paixão</b> por essa area é a possibilidade de <b>facilitar a vida das pessoas</b> atravéz de algo, <b>seja um programa complexo ou uma solução simples</b>, que eu possa fazer usando lógica e um computador (e talvez outros recursos).
+        </p>
 
         <div id="saibaMais">
-            <span>Saiba mais sobre mim <i class="bi bi-arrow-right"></i></span>
+            <span id="spanSaibaMais">Saiba mais sobre mim <i class="bi bi-arrow-right"></i></span>
             <button class="btn btn-dark">Baixar currículo</button>
         </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                2020
-                </div>
-                <div class="col">
-                2021
-                </div>
-                <div class="col">
-                2024
+        <div id="container-timeline" class="flex">
+            <div>
+                <span>2020</span>
+                <div class="timeline-row">
+                    <div class="square flex">
+                        <i class="bi bi-book"></i>
+                        <div class="line"></div>
+                    </div>
+                    <p>Foi aqui que começei a me interessar por programação. Na pademia entrei em contato com diversas tecnologias que me proporcionaram o EAD na minha antiga escola. Começei a conhecer as IAs e em <b id="cursorPy">programar em Python por interece próprio.</b></p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                <div class="square flex">
-                    <i class="bi bi-virus2"></i>
-                </div>
-                <div class="line"></div>
-                </div>
-                <div class="col">
-                <div class="square flex">
-                    <i class="bi bi-book"></i>
-                </div>
-                <div class="line"></div>
-                </div>
-                <div class="col">
-                <div class="square flex">
-                    <i class="bi bi-trophy"></i>
-                </div>
+            <div>
+                <span>2021</span>
+                <div class="timeline-row">
+                    <div class="square flex">
+                        <i class="bi bi-virus2"></i>
+                        <div class="line"></div>
+                    </div>
+                    <p>Começei a estudar no <a href="https://www.cotemig.com.br/" target="_blank"><b id="cursorCotemig">Cotemig</b></a>. Consegui apreder linguagens e bibliotecas fora do currículo de ensino, como o próprio HTML e CSS. Essas linguagens me ajudaram na compreensão de outras. Completei também aluguns cursos da  <b id="cursos">Alura, Rocketseat e outras plataformas de ensino.</b></p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-4">
-                <p>
-                    Foi aqui que começei a me interessar por programação. Na pademia entrei em contato com diversas tecnologias que me proporcionaram o EAD na minha antiga escola. Começei a conhecer as IAs e em <b id="cursorPy">programar em Python por interece próprio.</b>
-                </p>
+            <div>
+                <span>2024</span>
+                <div class="timeline-row">
+                    <div class="square flex">
+                        <i class="bi bi-trophy"></i>
+                        <div class="line"></div>
+                    </div>
+                    <p>
+                        Começei a aprender MySQL, C# e iniciar o estudo formal de HTML e CSS na escola. Fui a <b id="cursorTrophy">melhor aluna da sala no primeiro trimestre de 2024.</b>
+                    </p>
                 </div>
-                <div class="col-4">
-                <p>
-                    Começei a estudar no <a href="https://www.cotemig.com.br/" target="_blank"><b id="cursorCotemig">Cotemig</b></a>. Consegui apreder linguagens e bibliotecas fora do currículo de ensino, como o próprio HTML e CSS. Essas linguagens me ajudaram na compreensão de outras. Completei também aluguns cursos da  <b id="cursos">Alura, Rocketseat e outras plataformas de ensino.</b>
-                </p>
-                </div>
-                <div class="col-4">
-                <p>
-                    Começei a aprender MySQL, C# e iniciar o estudo formal de HTML e CSS na escola. Fui a <b id="cursorTrophy">melhor aluna da sala no primeiro trimestre de 2024.</b> 
-                </p>
-                </div>
+            </div>
+        </div>
             </div>
         </div>
     </section>
@@ -197,8 +207,44 @@
                 </div>
             </div>
         </div>
-        <div class="flex" style="height: 40vh;">
-            <ol style="list-style: upper-roman;">
+        <div id="barrasdeProgressoNova" class="flex invisible">
+            <span>Python</span>
+            <div class="progress">
+                <div class="progress-bar bg-danger w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <span>HTML/CSS/JS</span>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 65%;" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <span>UI/UX</span>
+            <div class="progress">
+                <div class="progress-bar bg-warning w-50" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <span>MySQL</span>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 58%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <span>C#</span>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 55%;"  role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <span>Vue</span>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 40%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <span>React</span>
+            <div class="progress">
+                <div class="progress-bar bg-success w-25" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <span>Photoshop</span>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 30%;"  role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+
+        <div id="softSkills" class="flex">
+            <ol class="flex" style="list-style: upper-roman; flex-direction: column;">
                 <li>Empatia</li>
                 <li>Proatividade</li>
                 <li>Diciplina</li>
@@ -230,15 +276,14 @@
         <h1 class="movrightToLeft">Contato</h1>
         <div>
             <h2>Contato</h2>
-            <p></p>
+            <p>Possui um negócio e que impulcionar suas vendas atravéz de um site ou aplicativo, precisa de ou deseja um software, entre em cotato. Vamos, juntos, resolver seus problemas!</p>
         </div>
         <div class="flex">
-            <input type="text">
-            <input type="text">
-            <textarea name="" id="">
-
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="Email">
+            <textarea name="" id="" placeholder="Mensagem">
             </textarea>
-            <input type="submit">
+            <button id="glass-btn">Enviar</button>
         </div>
     </section>
 
@@ -253,7 +298,7 @@
         <div class="row">
             <div class="col">
                 <a href="Currículo - Larissa Cravo.pdf" download>
-                    Baixar Currículo 
+                    Baixar Currículo
                     <i class="bi bi-file-earmark-arrow-down"></i>
                 </a>
             </div>
